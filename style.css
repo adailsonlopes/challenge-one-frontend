@@ -1,0 +1,552 @@
+/* variavéis */
+:root {
+  --cor-primaria: #f5f5f5;
+  --cor-secudaria: #eaf2fd;
+  --branco: #ffffff;
+
+  --azul-1: #2a7ae4;
+  --azul-2: #5595e9;
+  --azul-3: #d4e4fa;
+
+  --cinza-1: #464646;
+}
+
+/* resete */
+body,
+p,
+a,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label,
+textarea {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font: inherit;
+}
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+span {
+  color: var(--cinza-1);
+}
+li {
+  list-style-type: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+/* estilos base */
+body {
+  font-family: "Raleway", sans-serif;
+  margin: 0 auto;
+  background: var(--cor-primaria);
+  overflow-x: hidden;
+  /* 16px */
+  font-size: 1.6rem;
+}
+html {
+  /* 10px */
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+.btn-primario {
+  font-size: 1.4rem;
+  background: var(--azul-1);
+  padding: 12px 16px;
+  border: 1px solid var(--azul-1);
+  color: var(--branco);
+}
+.btn-secundario {
+  font-size: 1.4rem;
+  background: var(--branco);
+  padding: 12px 16px;
+  border: 1px solid var(--azul-1);
+  color: var(--azul-1);
+}
+.btn-primario:hover {
+  background: var(--azul-2);
+  opacity: 0.8;
+  color: var(--branco);
+}
+.btn-secundario:hover {
+  background: var(--azul-3);
+  border: 1px solid var(--azul-1);
+  color: var(--azul-1);
+}
+/* ESTILOS MOBILE */
+/* CABEÇALHO */
+.header {
+  display: flex;
+  margin: 16px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu li:nth-child(1),
+.menu li:nth-child(2),
+.menu li:nth-child(3),
+.menu li:nth-child(4),
+.menu li:nth-child(5) {
+  display: none;
+}
+.menu li:nth-child(6) {
+  font-size: 1.4rem;
+  color: var(--cinza-1);
+}
+/* INTRODUÇÂO */
+.introducao {
+  display: flex;
+  margin: 16px;
+  flex-direction: column-reverse;
+  gap: 16px;
+}
+.introducao img {
+  width: 30%;
+  margin-top: 16px;
+}
+.introducao-texto h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+.introducao p {
+  font-size: 1.4rem;
+  padding: 16px 0;
+}
+.introducao-social {
+  display: flex;
+  font-size: 1.4rem;
+  font-weight: 600;
+  justify-content: space-between;
+}
+.introducao-social a::after {
+  content: url(assets/img/arrow.svg);
+  margin-left: 4px;
+}
+/* SOBRE */
+#sobre {
+  background: var(--cor-secudaria);
+}
+.sobre-mim {
+  margin: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+.sobre-mim h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.sobre-mim p {
+  font-size: 1.4rem;
+  padding-bottom: 16px;
+}
+/* SKILLLS E HOBBIES */
+.skills h2,
+.hobbies h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 32px;
+}
+.skills-container,
+.hobbies-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin: 0 16px;
+}
+.skills-item,
+.hobbies-item {
+  height: 118px;
+  width: 156px;
+  flex-grow: 1;
+  background: var(--branco);
+  margin-bottom: 16px;
+  padding: 16px;
+  align-content: flex-end;
+}
+.skills-descricao p,
+.hobbies-descricao p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-top: 8px;
+}
+/* FORMAÇÃO */
+#formacao {
+  background: var(--cor-secudaria);
+}
+.formacao h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  padding: 32px;
+}
+
+.formacao-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+}
+.formacao-item {
+  display: flex;
+  height: 118px;
+  width: 296px;
+  align-items: center;
+  justify-content: center;
+  background: var(--branco);
+}
+.formacao-item img {
+  width: 30%;
+}
+.formacao-texto p {
+  font-size: 1.6rem;
+  font-weight: 700;
+  padding-top: 8px;
+  margin-bottom: 8px;
+}
+.formacao-texto span {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+/* EXPERIÊNCIA PROFISSIONAL */
+
+.projeto-container h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  padding-bottom: 32px;
+}
+.projeto-container {
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 32px 32px;
+}
+
+.projeto-tipo {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 64px;
+  flex-direction: column;
+}
+.projeto-texto h3 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.projeto-texto p {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+/* CONTATO */
+#contato {
+  background: var(--cor-secudaria);
+}
+.contato {
+  max-width: 1136px;
+  margin: 0 auto;
+  padding: 32px 32px;
+}
+.contato-img {
+  display: none;
+}
+.contato-texto h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  padding-top: 32px;
+  padding-bottom: 16px;
+}
+.contato-texto p {
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding-bottom: 16px;
+}
+.contato-form {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+  padding-bottom: 32px;
+}
+
+.input-box input,
+.input-box input,
+.input-box textarea {
+  box-sizing: border-box;
+  background: var(--branco);
+  font: 500 1.6rem "Raleway", sans-serif;
+  border-radius: 4px;
+  border-bottom: 2px solid #c8c8c8;
+  padding: 24px 16px 4px 16px;
+  width: 100%;
+  resize: none;
+  outline: none;
+}
+.input-box input:focus,
+.input-box input:focus,
+.input-box textarea:focus {
+  border-bottom: 2px solid var(--azul-1);
+  color: var(--cinza-1);
+}
+.contato-form button {
+  max-width: 50%;
+}
+.input-box {
+  position: relative;
+}
+.input-box label {
+  position: absolute;
+  left: 0;
+  padding: 10px;
+  pointer-events: none;
+  transition: 0.5s;
+}
+.input-box input:valid ~ label,
+.input-box input:focus ~ label,
+.input-box textarea:focus ~ label,
+.input-box textarea:valid ~ label {
+  color: var(--azul-1);
+  transform: translateX(8px) translateY(-3px);
+  font-size: 1.2rem;
+}
+
+/* RODAPÉ */
+.rodape span {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--azul-2);
+}
+.rodape {
+  text-align: center;
+  margin: 32px;
+}
+/* ESTILOS TABLET */
+@media screen and (min-width: 768px) {
+  /* CABEÇALHO */
+  .header {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 16px 32px;
+  }
+  .menu-contato {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
+  /* INTRODUÇÃO */
+  .introducao {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 32px 32px;
+    display: flex;
+    gap: 32px;
+    flex-direction: row;
+  }
+  .introducao img {
+    max-width: 146px;
+    max-height: 146px;
+    width: auto;
+    height: auto;
+    margin-top: 0;
+  }
+  .introducao-social {
+    display: flex;
+    justify-content: flex-start;
+    gap: 32px;
+    font-size: 1.6rem;
+  }
+  .introducao p {
+    padding: 8px 0;
+  }
+  .introducao-texto p {
+    font-size: 1.6rem;
+  }
+  .introducao-social a::after {
+    content: url(assets/img/arrow.svg);
+    margin-left: 8px;
+  }
+  /* SOBRE */
+  .sobre-mim {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 32px 32px;
+  }
+  /* SKILLS e HOBBIES */
+  .skills {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 32px 32px;
+  }
+  .hobbies {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 32px 32px;
+  }
+  .skills-container,
+  .hobbies-container {
+    margin: 0;
+  }
+  .skills-item,
+  .hobbies-item {
+    height: 118px;
+    width: 224px;
+  }
+  /* FORMAÇÃO ACADÊMICA */
+  .formacao {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 32px 32px;
+  }
+  .formacao-container {
+    justify-content: space-between;
+  }
+  .formacao-item {
+    height: 118px;
+    width: 224px;
+  }
+}
+/* ESTILOS DESKTOP */
+@media screen and (min-width: 1024px) {
+  /* CABEÇALHO */
+  .header {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  .menu li:nth-child(1),
+  .menu li:nth-child(2),
+  .menu li:nth-child(3),
+  .menu li:nth-child(4),
+  .menu li:nth-child(5) {
+    display: block;
+  }
+  .menu {
+    display: flex;
+    gap: 16px;
+  }
+  .menu a {
+    padding: 8px;
+  }
+  .menu a:hover {
+    color: var(--azul-1);
+  }
+  /* INTRODUÇÃO */
+  .introducao img {
+    max-width: 365px;
+    max-height: 365px;
+    width: auto;
+    height: auto;
+    margin-top: 0;
+  }
+  .introducao-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .introducao-texto h1 {
+    font-size: 5.2rem;
+  }
+  .introducao-texto p {
+    font-size: 2.2rem;
+    padding: 24px 0;
+  }
+  .sobre-mim p {
+    width: 65%;
+  }
+  /* SKILLS E HOBBIES */
+  .skills-container,
+  .hobbies-container {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+  .skills h2,
+  .hobbies h2 {
+    font-size: 3.2rem;
+  }
+  .skills-item,
+  .hobbies-item {
+    height: 174px;
+    width: 176px;
+  }
+  /* FORMAÇÃO */
+  .formacao h2 {
+    font-size: 3.2rem;
+  }
+  .formacao-item {
+    width: 368px;
+    height: 286px;
+  }
+  .formacao-item img {
+    width: 50%;
+  }
+  .formacao-texto p {
+    font-size: 2.2rem;
+  }
+  .formacao-texto span {
+    font-size: 1.6rem;
+  }
+  /* EXPERIÊNCIA */
+  .projeto-container h2 {
+    font-size: 3.2rem;
+  }
+  .projeto-tipo {
+    flex-direction: row;
+    align-items: center;
+  }
+  .projeto-tipo:nth-child(odd) {
+    flex-direction: row-reverse;
+  }
+  .projeto-texto h3 {
+    font-size: 2.2rem;
+  }
+  .projeto-texto p {
+    font-size: 1.6rem;
+  }
+  /* CONTATO */
+  .contato {
+    max-width: 1136px;
+    margin: 0 auto;
+    padding: 64px 64px;
+  }
+  .contato-form {
+    padding-bottom: 0;
+  }
+  .contato-container {
+    display: flex;
+    gap: 16px;
+    padding-top: 64px;
+  }
+  .contato-img {
+    max-width: 100%;
+    display: block;
+  }
+  .contato-form input[type="text"],
+  .contato-form input[type="email"],
+  .contato-form textarea {
+    width: 100%;
+  }
+  .contato-texto p {
+    padding-bottom: 32px;
+  }
+  .contato-texto h2 {
+    font-size: 3.2rem;
+    padding-top: 0;
+    padding-bottom: 8px;
+  }
+  .contato-form button {
+    width: 30%;
+  }
+}
