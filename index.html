@@ -261,24 +261,28 @@
                     <p>Quer entrar em contato comigo?</br>
                         Preencha o formulário ao lado e entrarei em contato o mais rápido possível.</p>
 
-                    <form action="" class="contato-form">
+                    <form action="/form2.html" class="contato-form" data-formulario>
                         <div class="input-box">
-                            <input type="text" id="name" maxlength="50" required>
+                            <span class="mensagem-erro"></span>
+                            <input name="nome" type="text" id="name" minlength="4" maxlength="50" required>
                             <label for="name">Nome</label>
                         </div>
                         <div class="input-box">
-                            <input type="text" id="email" required>
+                            <span class="mensagem-erro"></span>
+                            <input name="email" type="email" id="email" required>
                             <label for="email">E-mail</label>
                         </div>
                         <div class="input-box">
-                            <input type="text" id="assunto" maxlength="50" required>
+                            <span class="mensagem-erro"></span>
+                            <input name="assunto" type="text" id="assunto" minlength="10" maxlength="50" required>
                             <label for="assunto">Assunto</label>
                         </div>
                         <div class="input-box">
-                            <textarea name="mensagem" id="mensagem" cols="20" rows="4" maxlength="300" required></textarea>
+                            <span class="mensagem-erro"></span>
+                            <textarea name="mensagem" type="text" id="mensagem" cols="20" rows="4" minlength="10" maxlength="300" required></textarea>
                             <label for="mensagem">Mensagem</label>
                         </div>
-                        <button class="btn-primario">Enviar mensagem</button>
+                        <button class="btn-primario" type="submit">Enviar mensagem</button>
                     </form>
                 </div>
             </div>
@@ -293,7 +297,7 @@
             <p>Copyright 2024 - Desenvolvido By José </p>
         </div>
     </footer>
-
+    <script src="validate.js" type="module"></script>
 </body>
 
 </html>

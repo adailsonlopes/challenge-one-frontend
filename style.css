@@ -309,6 +309,7 @@ html {
 .input-box {
   position: relative;
 }
+
 .input-box label {
   position: absolute;
   left: 0;
@@ -324,7 +325,14 @@ html {
   transform: translateX(8px) translateY(-3px);
   font-size: 1.2rem;
 }
-
+.mensagem-erro textarea {
+  margin-top: 200px;
+}
+.mensagem-erro {
+  font-size: 1.4rem;
+  position: relative;
+  color: red;
+}
 /* RODAPÉ */
 .rodape span {
   font-size: 1.2rem;
