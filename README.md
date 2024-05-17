@@ -10,7 +10,9 @@ O objetivo principal deste desafio era viver a experiência de realizar um proje
 
 ![HTML](https://img.shields.io/badge/html-grey?style=for-the-badge&logo=html5)
 
-![JavaScript](https://img.shields.io/badge/css-grey?style=for-the-badge&logo=css3)
+![CSS](https://img.shields.io/badge/css-grey?style=for-the-badge&logo=css3)
+
+![Javascript](https://img.shields.io/badge/javascript-grey?style=for-the-badge&logo=javascript)
 
 ![Figma](https://img.shields.io/badge/figma-grey?style=for-the-badge&logo=figma)
 
